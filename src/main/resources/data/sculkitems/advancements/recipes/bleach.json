@@ -1,0 +1,34 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"has_empty_jug": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"items": [
+							"bleached:water_jug"
+						]
+					}
+				]
+			}
+		},
+		"has_the_recipe": {
+			"trigger": "minecraft:recipe_unlocked",
+			"conditions": {
+				"recipe": "bleached:bleach"
+			}
+		}
+	},
+	"requirements": [
+		[
+			"has_empty_jug",
+			"has_the_recipe"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"bleached:bleach"
+		]
+	}
+}

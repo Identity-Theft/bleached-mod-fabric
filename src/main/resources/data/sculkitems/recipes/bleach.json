@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:bone_meal"
+    },
+    {
+      "item": "minecraft:glowstone_dust"
+    },
+    {
+      "item": "bleached:water_jug"
+    }
+  ],
+  "result": {
+    "item": "bleached:bleach"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "minecraft:glass"
+    }
+  },
+  "pattern": [
+    "## ",
+    "# #",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "item": "bleached:empty_jug"
+  }
+}

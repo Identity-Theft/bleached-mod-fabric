@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "minecraft:beds"
+    },
+    {
+      "item": "bleached:bleach"
+    }
+  ],
+  "result": {
+    "item": "minecraft:white_bed"
+  }
+}

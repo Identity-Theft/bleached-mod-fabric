@@ -1,0 +1,12 @@
+{
+	"advancement.bleach.title": "Tasty",
+	"advancement.bleach.description": "Drink bleach",
+
+	"itemGroup.bleached.bleached": "Bleached",
+
+	"item.bleached.bleach": "Bleach",
+	"item.bleached.empty_jug": "Empty Jug",
+	"item.bleached.water_jug": "Water Jug",
+
+	"death.attack.drank_bleach": "%1$s drank bleach"
+}

@@ -1,0 +1,30 @@
+{
+	"display": {
+		"icon": {
+			"item": "bleached:bleach"
+		},
+		"title": {
+			"translate": "advancement.bleach.title"
+		},
+		"description": {
+			"translate": "advancement.bleach.description"
+		},
+		"frame": "challenge",
+		"show_toast": true,
+		"announce_to_chat": true,
+		"hidden": true
+	},
+	"parent": "minecraft:adventure/root",
+	"criteria": {
+		"item": {
+			"trigger": "minecraft:consume_item",
+			"conditions": {
+				"item": {
+					"items": [
+						"bleached:bleach"
+					]
+				}
+			}
+		}
+	}
+}
