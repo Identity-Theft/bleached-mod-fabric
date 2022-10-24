@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "Bleached",
-  "description": "Adds Bleach which can be used to remove the colour from anything crafted us!",
+  "description": "Adds Bleach which can be used to remove the colour from anything crafted using and leather armour!",
   "authors": [
-    "Me!"
+    "Identity Theft"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/bleached",
+    "sources": "https://github.com/NormalHuman420/bleached-mod-fabric"
   },
 
   "license": "CC0-1.0",
@@ -29,7 +29,7 @@
   "depends": {
     "fabricloader": ">=0.14.6",
     "fabric": "*",
-    "minecraft": "~1.19",
+    "minecraft": "~1.19.2",
     "java": ">=17"
   },
   "suggests": {
