@@ -67,12 +67,12 @@ public class BleachItem extends Item {
 
 	@Override
 	public SoundEvent getDrinkSound() {
-		return SoundEvents.ENTITY_GENERIC_DRINK;
+		return SoundEvents.ITEM_HONEY_BOTTLE_DRINK;
 	}
 
 	@Override
 	public SoundEvent getEatSound() {
-		return SoundEvents.ENTITY_GENERIC_DRINK;
+		return SoundEvents.ITEM_HONEY_BOTTLE_DRINK;
 	}
 
 	@Override
