@@ -2,6 +2,7 @@ package net.identitytheft.bleached;
 
 import net.fabricmc.api.ModInitializer;
 import net.identitytheft.bleached.item.ModItems;
+import net.minecraft.entity.data.DataTracker;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
