@@ -1,5 +1,6 @@
 package net.identitytheft.bleached.item;
 
+import net.identitytheft.bleached.Bleached;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -31,7 +32,7 @@ public class WaterJugItem extends Item {
 		}
 
 		if (!((PlayerEntity)user).getAbilities().creativeMode) {
-			return new ItemStack(ModItems.EMPTY_JUG);
+			return new ItemStack(Bleached.EMPTY_JUG);
 		}
 
 		return stack;

@@ -1,5 +1,6 @@
 package net.identitytheft.bleached.item;
 
+import net.identitytheft.bleached.Bleached;
 import net.identitytheft.bleached.entity.damage.ModDamageSource;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
@@ -42,11 +43,11 @@ public class BleachItem extends Item {
 		}
 
 		if (user.isAlive() && !((PlayerEntity)user).getAbilities().creativeMode) {
-			return new ItemStack(ModItems.EMPTY_JUG);
+			return new ItemStack(Bleached.EMPTY_JUG);
 		} else if (!((PlayerEntity)user).getAbilities().creativeMode) {
 			PlayerEntity playerEntity = (PlayerEntity)user;
 
-			ItemStack itemStack = new ItemStack(ModItems.EMPTY_JUG);
+			ItemStack itemStack = new ItemStack(Bleached.EMPTY_JUG);
 			playerEntity.dropItem(itemStack, true, false);
 			return ItemStack.EMPTY;
 		}

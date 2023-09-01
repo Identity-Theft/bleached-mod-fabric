@@ -1,5 +1,6 @@
 package net.identitytheft.bleached.item;
 
+import net.identitytheft.bleached.Bleached;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidDrainable;
 import net.minecraft.entity.player.PlayerEntity;
@@ -37,7 +38,7 @@ public class EmptyJugItem extends Item {
 			if (world.getFluidState(blockPos).isIn(FluidTags.WATER)) {
 				world.playSound(user, user.getX(), user.getY(), user.getZ(), SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.NEUTRAL, 1.0f, 1.0f);
 				world.emitGameEvent(user, GameEvent.FLUID_PICKUP, blockPos);
-				return TypedActionResult.success(this.fill(itemStack, user, new ItemStack(ModItems.WATER_JUG)));
+				return TypedActionResult.success(this.fill(itemStack, user, new ItemStack(Bleached.WATER_JUG)));
 			}
 		}
 
@@ -52,7 +53,7 @@ public class EmptyJugItem extends Item {
 			fluidDrainable.getBucketFillSound().ifPresent(sound -> user.playSound(sound, 1.0f, 1.0f));
 			world.emitGameEvent(user, GameEvent.FLUID_PICKUP, blockPos);
 
-			itemStack2 = new ItemStack(ModItems.WATER_JUG);
+			itemStack2 = new ItemStack(Bleached.WATER_JUG);
 			ItemStack itemStack3 = ItemUsage.exchangeStack(itemStack, user, itemStack2);
 			return TypedActionResult.success(itemStack3, world.isClient());
 		}
