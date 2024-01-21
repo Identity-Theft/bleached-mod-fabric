@@ -20,7 +20,7 @@ public class Bleached implements ModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	public static Item EMPTY_JUG  = register("empty_jug", new EmptyJugItem(new FabricItemSettings()));
 	public static Item WATER_JUG = register("water_jug", new WaterJugItem(new FabricItemSettings().maxCount(1)));;
-	public static Item BLEACH = register("bleach", new BleachItem(new FabricItemSettings().food(ModFoodComponents.BLEACH).maxCount(1).recipeRemainder(EMPTY_JUG)));
+	public static Item BLEACH = register("bleach", new BleachItem(new FabricItemSettings().maxCount(1).recipeRemainder(EMPTY_JUG)));
 
 	public static final ItemGroup BLEACHED = FabricItemGroup.builder().displayName(Text.translatable("itemGroup.bleached.bleached")).icon(() -> new ItemStack(BLEACH)).build();
 
