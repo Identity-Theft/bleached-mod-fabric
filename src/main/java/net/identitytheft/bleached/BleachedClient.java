@@ -11,7 +11,7 @@ public class BleachedClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         FabricLoader.getInstance().getModContainer("bleached").ifPresent(modContainer -> {
-            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier("bleached:programmer_art"), modContainer, ResourcePackActivationType.NORMAL);
+            ResourceManagerHelper.registerBuiltinResourcePack(new Identifier("bleached:bleached_programmer_art"), modContainer, ResourcePackActivationType.NORMAL);
         });
     }
 }
