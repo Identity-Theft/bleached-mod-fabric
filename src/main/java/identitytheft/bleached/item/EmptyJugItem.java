@@ -1,6 +1,6 @@
-package net.identitytheft.bleached.item;
+package identitytheft.bleached.item;
 
-import net.identitytheft.bleached.Bleached;
+import identitytheft.bleached.Bleached;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.FluidDrainable;
 import net.minecraft.entity.player.PlayerEntity;
@@ -29,8 +29,8 @@ public class EmptyJugItem extends Item {
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
 		ItemStack itemStack = user.getStackInHand(hand);
 
-		BlockHitResult hitResult = this.raycast(world, user, RaycastContext.FluidHandling.SOURCE_ONLY);
-		if (((HitResult)hitResult).getType() == HitResult.Type.BLOCK) {
+		BlockHitResult hitResult = raycast(world, user, RaycastContext.FluidHandling.SOURCE_ONLY);
+		if (hitResult.getType() == HitResult.Type.BLOCK) {
 			BlockPos blockPos = hitResult.getBlockPos();
 			if (!world.canPlayerModifyAt(user, blockPos)) {
 				return TypedActionResult.pass(itemStack);

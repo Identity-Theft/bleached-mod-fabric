@@ -1,4 +1,4 @@
-package net.identitytheft.bleached;
+package identitytheft.bleached;
 
 
 import net.fabricmc.api.ClientModInitializer;

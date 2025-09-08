@@ -1,8 +1,8 @@
 ### About
 
-Bleached adds three new items to the game: the Empty Jug, Jug of Water and Bleach.
+Bleached adds three new items to the game: the Glass Jug, Water Jug and Bleach.
 
-Using seven glass blocks, you can craft the empty jug. With the empty jug, you can right click a water source to get the jug of water, just like bottle of water in vanilla. The jug of water can then crafted with glowstone and bonemeal to make bleach.
+Using seven glass blocks, you can craft the glass jug. With the glass jug, you can right click a water source to fill it with water, just like the water bottle in vanilla. The water jug can then crafted with glowstone and bonemeal to make bleach.
 
 Bleach can be used to make wool, carpet, banners or beds white and can remove any dye from leather armour. Yes, you can also drink it ;).
 

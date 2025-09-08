@@ -1,16 +1,18 @@
-package net.identitytheft.bleached.item;
+package identitytheft.bleached.item;
 
-import net.identitytheft.bleached.Bleached;
-import net.identitytheft.bleached.entity.damage.ModDamageSource;
+import identitytheft.bleached.Bleached;
+import identitytheft.bleached.entity.damage.ModDamageTypes;
 import net.minecraft.advancement.criterion.Criteria;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.damage.DamageSource;
+import net.minecraft.entity.damage.DamageType;
+import net.minecraft.entity.damage.DamageTypes;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
-import net.minecraft.item.Items;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -29,17 +31,18 @@ public class BleachItem extends Item {
 	@Override
 	public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
 		PlayerEntity playerEntity = user instanceof PlayerEntity ? (PlayerEntity)user : null;
-		boolean creativeMode = playerEntity != null ? playerEntity.getAbilities().creativeMode : false;
+		boolean creativeMode = playerEntity != null && playerEntity.getAbilities().creativeMode;
 
-		user.damage(ModDamageSource.DRANK_BLEACH, Float.MAX_VALUE);
+		user.damage(ModDamageTypes.of(world, ModDamageTypes.DRANK_BLEACH), Float.MAX_VALUE);
 
 		if (playerEntity instanceof ServerPlayerEntity serverPlayerEntity) {
 			Criteria.CONSUME_ITEM.trigger(serverPlayerEntity, stack);
 
 			if (serverPlayerEntity.isAlive()) {
-				serverPlayerEntity.getHungerManager().add(20,20);
-				serverPlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 600, 0));
-				serverPlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200, 0));
+//				serverPlayerEntity.getHungerManager().add(20,20);
+				serverPlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.POISON, 1200, 9));
+				serverPlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 1200, 9));
+				serverPlayerEntity.addStatusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 1200, 0));
 			}
 		}
 
@@ -65,7 +68,9 @@ public class BleachItem extends Item {
 		} else if (!creativeMode) {
 
 			ItemStack itemStack = new ItemStack(Bleached.EMPTY_JUG);
-			playerEntity.dropItem(itemStack, true, false);
+			if (playerEntity != null) {
+				playerEntity.dropItem(itemStack, true, false);
+			}
 			return ItemStack.EMPTY;
 		}
 

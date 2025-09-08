@@ -4,38 +4,29 @@
   "version": "${version}",
 
   "name": "Bleached",
-  "description": "Adds Bleach which can be used to remove the colour from anything crafted using and leather armour!",
+  "description": "Adds three new items to the game: the Glass Jug, Water Jug and Bleach.",
   "authors": [
     "Identity Theft"
   ],
   "contact": {
     "homepage": "https://www.identity-theft.github.io",
-    "sources": "https://github.com/NormalHuman420/bleached-mod-fabric"
+    "sources": "https://github.com/Identity-Theft/bleached"
   },
-
   "license": "MIT",
   "icon": "assets/bleached/icon.png",
-
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.identitytheft.bleached.Bleached"
+      "identitytheft.bleached.Bleached"
     ],
     "client": [
-      "net.identitytheft.bleached.BleachedClient"
+      "identitytheft.bleached.BleachedClient"
     ]
   },
-  "mixins": [
-    "bleached.mixins.json"
-  ],
-
   "depends": {
-    "fabricloader": ">=0.14.6",
-    "fabric": "*",
-    "minecraft": ">=1.20",
-    "java": ">=17"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "fabricloader": ">=0.17.2",
+    "minecraft": ">=1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
   }
 }
