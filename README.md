@@ -30,7 +30,3 @@ Bleach can be used to make wool, carpet, banners or beds white and can remove an
 [![Modrinth](https://badges.penpow.dev/badges/available/modrinth/cozy-minimal.svg)](https://modrinth.com/mod/bleached)
 [![GitHub](https://badges.penpow.dev/badges/available/github/cozy-minimal.svg)](https://github.com/Identity-Theft/bleached)
 [![ko-fi](https://badges.penpow.dev/badges/donate/kofi-singular/cozy-minimal.svg)](https://ko-fi.com/identitytheft)
-
-***
-
-[![BisectHosting](https://www.bisecthosting.com/partners/custom-banners/06da615c-314d-40b5-8cca-00204bd8d9b4.webp)](https://bisecthosting.com/identity)
